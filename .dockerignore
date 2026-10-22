@@ -1,0 +1,13 @@
+.git
+.idea
+_backup_design_v1
+mockup_media
+cadet_credentials*.txt
+backend/venv
+backend/db.sqlite3
+backend/staticfiles
+**/__pycache__
+frontend/node_modules
+frontend/dist
+pitch
+backend/media

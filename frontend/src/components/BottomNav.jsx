@@ -3,7 +3,8 @@ import { useI18n } from '../i18n/context'
 
 const TABS = [
   { to: '/map', icon: '🗺️', label: 'nav.missions' },
-  { to: '/arcade', icon: '🎮', label: 'nav.arcade' },
+  { to: '/academy', icon: '🎓', label: 'nav.academy' },
+  { to: '/fun-facts', icon: '💡', label: 'nav.funFacts' },
   { to: '/journal', icon: '📔', label: 'nav.journal' },
   { to: '/passport', icon: '🛂', label: 'nav.passport' },
 ]

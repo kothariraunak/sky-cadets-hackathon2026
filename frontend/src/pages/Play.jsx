@@ -7,7 +7,7 @@ import { LoadingScreen } from '../components/AppLayout'
 import { useGame } from '../context/GameContext'
 import { useI18n } from '../i18n/context'
 
-// Full-screen game (no tab bar), launched from a mission or from the Arcade.
+// Full-screen game (no tab bar), launched from a mission or from the Academy.
 export default function Play() {
   const { slug } = useParams()
   const [params] = useSearchParams()
@@ -30,7 +30,7 @@ export default function Play() {
     }
   }, [slug, flight])
 
-  const exit = () => navigate(mission ? `/missions/${mission.phase}` : '/arcade')
+  const exit = () => navigate(mission ? `/missions/${mission.phase}` : '/academy')
 
   if (error) return <LoadingScreen text={t('play.loadError')} />
   if (!activity) return <LoadingScreen />
@@ -41,7 +41,7 @@ export default function Play() {
         <Crest size={110} />
         <span className="icon-spacer" />
       </header>
-      <ActivityPlayer activity={activity} missionId={missionId} onExit={exit} exitLabel={mission ? t('reward.continue') : t('play.backToArcade')} />
+      <ActivityPlayer activity={activity} missionId={missionId} onExit={exit} exitLabel={mission ? t('reward.continue') : t('play.backToAcademy')} />
     </div>
   )
 }

@@ -24,7 +24,7 @@ function Cartridge({ a, badgeIcon }) {
   )
 }
 
-export default function Arcade() {
+export default function Academy() {
   const navigate = useNavigate()
   const { arcade, badges, stage } = useGame()
   const { t } = useI18n()
@@ -48,7 +48,7 @@ export default function Arcade() {
   return (
     <div className="arcade-page">
       <div className="section-head">
-        <h1>{t('nav.arcade')}</h1>
+        <h1>{t('nav.academy')}</h1>
         <span className="muted">{t('arcade.summary', { n: arcade.activities.length, played })}</span>
       </div>
 

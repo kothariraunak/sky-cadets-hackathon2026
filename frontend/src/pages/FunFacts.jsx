@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import client from '../api/client'
 import { formatDate } from '../game/config'
 import { useI18n } from '../i18n/context'
@@ -70,7 +69,6 @@ export default function FunFacts() {
 
   return (
     <div className="fun-facts-page">
-      <Link to="/map" className="back-link">← {t('nav.missions')}</Link>
       <div className="section-head">
         <h1>💡 {t('funFacts.title')}</h1>
         <span className="muted">{t('funFacts.progress', { n: viewed.length, total })}</span>

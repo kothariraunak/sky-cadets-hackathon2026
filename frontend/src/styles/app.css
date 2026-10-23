@@ -304,7 +304,7 @@ textarea.field { min-height: 90px; resize: vertical; }
   width: min(560px, calc(100% - 2 * var(--gutter)));
   height: var(--dock-h);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   padding: 6px;
   border-radius: 26px;
   background: linear-gradient(180deg, rgba(20, 78, 78, 0.95), rgba(6, 36, 37, 0.97));
@@ -327,6 +327,8 @@ textarea.field { min-height: 90px; resize: vertical; }
 .dock-icon { font-size: 24px; line-height: 1; transition: transform 0.2s; filter: grayscale(0.4); }
 .dock-item.active { color: #fff; background: rgba(63, 224, 208, 0.16); box-shadow: inset 0 0 0 1px rgba(63, 224, 208, 0.4); }
 .dock-item.active .dock-icon { transform: translateY(-2px) scale(1.12); filter: none; }
+.dock-label { max-width: 100%; padding: 0 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 380px) { .dock-item { font-size: 10.5px; } .dock-icon { font-size: 22px; } }
 
 /* ---------- Boarding pass + scan frame ---------- */
 .boarding-pass {
